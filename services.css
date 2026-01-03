@@ -1,0 +1,930 @@
+/* Services Page Specific Styles */
+
+/* Page Hero */
+.page-hero {
+    position: relative;
+    min-height: 60vh;
+    display: flex;
+    align-items: center;
+    padding-top: 100px;
+    overflow: hidden;
+}
+
+.services-hero {
+    background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.4)), url('../images/services-hero.jpg');
+    background-size: cover;
+    background-position: center;
+}
+
+.page-hero-content {
+    position: relative;
+    z-index: 2;
+    text-align: center;
+    color: white;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.page-hero-title {
+    font-size: 3.5rem;
+    font-weight: 500;
+    color: white;
+    margin-bottom: 1.5rem;
+}
+
+.page-hero-subtitle {
+    font-size: 1.5rem;
+    color: rgba(255, 255, 255, 0.9);
+    max-width: 600px;
+    margin: 0 auto 2.5rem;
+}
+
+.page-hero-cta {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+/* Services Introduction */
+.services-intro {
+    background-color: white;
+}
+
+.intro-content {
+    max-width: 900px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.intro-text {
+    font-size: 1.125rem;
+    color: var(--medium-gray);
+    line-height: 1.7;
+    margin-bottom: 1.5rem;
+}
+
+/* Services Navigation */
+.services-nav {
+    background-color: var(--off-white);
+    padding: 1.5rem 0;
+    margin-bottom: 2rem;
+    position: sticky;
+    top: 80px;
+    z-index: 100;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+}
+
+.services-nav-container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+}
+
+.service-nav-btn {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 1rem 1.5rem;
+    background-color: white;
+    border: 1px solid #e0e0e0;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all var(--transition-normal);
+    min-width: 120px;
+    font-family: var(--heading-font);
+    font-weight: 500;
+    color: var(--medium-gray);
+}
+
+.service-nav-btn i {
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+    color: var(--medium-gray);
+    transition: color var(--transition-normal);
+}
+
+.service-nav-btn span {
+    font-size: 0.875rem;
+    text-align: center;
+}
+
+.service-nav-btn:hover {
+    background-color: var(--light-green);
+    border-color: var(--primary-green);
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-sm);
+}
+
+.service-nav-btn:hover i {
+    color: var(--primary-green);
+}
+
+.service-nav-btn.active {
+    background-color: var(--primary-green);
+    border-color: var(--primary-green);
+    color: white;
+    box-shadow: var(--shadow-md);
+}
+
+.service-nav-btn.active i {
+    color: white;
+}
+
+/* Service Details */
+.service-details-container {
+    background-color: white;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: var(--shadow-md);
+    margin-bottom: 3rem;
+}
+
+.service-detail {
+    display: none;
+    padding: 0;
+}
+
+.service-detail.active {
+    display: block;
+    animation: fadeIn 0.5s ease;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+.service-detail-header {
+    background: linear-gradient(135deg, var(--primary-green) 0%, var(--dark-green) 100%);
+    padding: 3rem;
+    color: white;
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+}
+
+.service-icon-large {
+    width: 80px;
+    height: 80px;
+    background-color: rgba(255, 255, 255, 0.2);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2.5rem;
+    flex-shrink: 0;
+}
+
+.service-title-wrapper {
+    flex-grow: 1;
+}
+
+.service-detail-title {
+    font-size: 2.5rem;
+    font-weight: 500;
+    color: white;
+    margin-bottom: 0.5rem;
+}
+
+.service-detail-subtitle {
+    font-size: 1.25rem;
+    color: rgba(255, 255, 255, 0.9);
+    margin-bottom: 0;
+}
+
+.service-detail-content {
+    padding: 3rem;
+    display: grid;
+    grid-template-columns: 1fr 350px;
+    gap: 3rem;
+}
+
+.service-detail-main {
+    display: flex;
+    flex-direction: column;
+    gap: 2.5rem;
+}
+
+.service-description p {
+    font-size: 1.125rem;
+    line-height: 1.7;
+    color: var(--charcoal);
+    margin-bottom: 1.5rem;
+}
+
+/* Service Benefits */
+.service-benefits h4,
+.service-process h4,
+.service-features h4,
+.service-maintenance-plans h4,
+.service-materials h4,
+.service-seasonal h4,
+.service-safety h4,
+.service-quick-facts h4 {
+    font-size: 1.5rem;
+    font-weight: 500;
+    margin-bottom: 1.5rem;
+    color: var(--charcoal);
+}
+
+.service-benefits ul {
+    list-style: none;
+    padding-left: 0;
+}
+
+.service-benefits li {
+    margin-bottom: 1rem;
+    display: flex;
+    align-items: flex-start;
+}
+
+.service-benefits li i {
+    color: var(--primary-green);
+    margin-right: 1rem;
+    margin-top: 0.25rem;
+    flex-shrink: 0;
+}
+
+/* Process Steps */
+.process-steps {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.process-step {
+    display: flex;
+    gap: 1.5rem;
+    align-items: flex-start;
+}
+
+.step-number {
+    width: 40px;
+    height: 40px;
+    background-color: var(--primary-green);
+    color: white;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: var(--heading-font);
+    font-weight: 500;
+    font-size: 1.25rem;
+    flex-shrink: 0;
+}
+
+.step-content h5 {
+    font-size: 1.25rem;
+    font-weight: 500;
+    margin-bottom: 0.5rem;
+    color: var(--charcoal);
+}
+
+.step-content p {
+    color: var(--medium-gray);
+    margin-bottom: 0;
+}
+
+/* Features Grid */
+.features-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1.5rem;
+    margin-top: 1rem;
+}
+
+.feature {
+    background-color: var(--off-white);
+    padding: 1.5rem;
+    border-radius: 8px;
+    border-left: 4px solid var(--primary-green);
+    transition: transform var(--transition-normal);
+}
+
+.feature:hover {
+    transform: translateY(-5px);
+}
+
+.feature i {
+    font-size: 2rem;
+    color: var(--primary-green);
+    margin-bottom: 1rem;
+}
+
+.feature h5 {
+    font-size: 1.25rem;
+    font-weight: 500;
+    margin-bottom: 0.5rem;
+    color: var(--charcoal);
+}
+
+.feature p {
+    color: var(--medium-gray);
+    margin-bottom: 0;
+    font-size: 0.95rem;
+}
+
+/* Maintenance Plans */
+.plans-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 1.5rem;
+    margin-top: 1rem;
+}
+
+.plan {
+    background-color: white;
+    border: 1px solid #e0e0e0;
+    border-radius: 8px;
+    padding: 2rem;
+    position: relative;
+    transition: all var(--transition-normal);
+    display: flex;
+    flex-direction: column;
+}
+
+.plan:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--shadow-md);
+}
+
+.plan.recommended {
+    border-color: var(--primary-green);
+    box-shadow: 0 0 0 1px var(--primary-green);
+}
+
+.plan-badge {
+    position: absolute;
+    top: -12px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: var(--primary-green);
+    color: white;
+    padding: 0.25rem 1rem;
+    border-radius: 20px;
+    font-size: 0.875rem;
+    font-weight: 500;
+    white-space: nowrap;
+}
+
+.plan-header {
+    text-align: center;
+    margin-bottom: 1.5rem;
+    padding-bottom: 1.5rem;
+    border-bottom: 1px solid #eee;
+}
+
+.plan-title {
+    font-size: 1.5rem;
+    font-weight: 500;
+    margin-bottom: 0.5rem;
+    color: var(--charcoal);
+}
+
+.plan-price {
+    font-size: 2rem;
+    font-weight: 500;
+    color: var(--primary-green);
+}
+
+.plan-price span {
+    font-size: 1rem;
+    color: var(--medium-gray);
+}
+
+.plan-desc {
+    color: var(--medium-gray);
+    font-size: 0.95rem;
+    margin-bottom: 0;
+}
+
+.plan-features {
+    list-style: none;
+    padding-left: 0;
+    margin-bottom: 2rem;
+    flex-grow: 1;
+}
+
+.plan-features li {
+    margin-bottom: 0.75rem;
+    display: flex;
+    align-items: center;
+}
+
+.plan-features li i {
+    margin-right: 0.75rem;
+    font-size: 0.875rem;
+}
+
+.plan-features li i.fa-check {
+    color: var(--primary-green);
+}
+
+.plan-features li i.fa-times {
+    color: #ccc;
+}
+
+.plan .btn-block {
+    margin-top: auto;
+}
+
+/* Materials Grid */
+.materials-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1.5rem;
+    margin-top: 1rem;
+}
+
+.material {
+    text-align: center;
+    padding: 1.5rem;
+    background-color: var(--off-white);
+    border-radius: 8px;
+}
+
+.material-icon {
+    width: 60px;
+    height: 60px;
+    background-color: var(--light-green);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 1rem;
+    color: var(--primary-green);
+    font-size: 1.5rem;
+}
+
+.material h5 {
+    font-size: 1.25rem;
+    font-weight: 500;
+    margin-bottom: 0.5rem;
+    color: var(--charcoal);
+}
+
+.material p {
+    color: var(--medium-gray);
+    font-size: 0.95rem;
+    margin-bottom: 0;
+}
+
+/* Water Savings */
+.water-savings {
+    margin-top: 2rem;
+}
+
+.savings-chart {
+    max-width: 600px;
+    margin-top: 1rem;
+}
+
+.savings-item {
+    margin-bottom: 1.5rem;
+}
+
+.savings-label {
+    font-weight: 500;
+    margin-bottom: 0.5rem;
+    color: var(--charcoal);
+}
+
+.savings-bar {
+    height: 24px;
+    background-color: #e9ecef;
+    border-radius: 12px;
+    overflow: hidden;
+    margin-bottom: 0.5rem;
+}
+
+.savings-fill {
+    height: 100%;
+    border-radius: 12px;
+}
+
+.savings-fill.traditional {
+    background-color: #dc3545;
+}
+
+.savings-fill.basic {
+    background-color: #ffc107;
+}
+
+.savings-fill.smart {
+    background-color: var(--primary-green);
+}
+
+.savings-percent {
+    font-weight: 500;
+    color: var(--medium-gray);
+    text-align: right;
+    font-size: 0.95rem;
+}
+
+/* Benefits Grid */
+.benefits-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1.5rem;
+    margin-top: 1rem;
+}
+
+.benefit-card {
+    text-align: center;
+    padding: 1.5rem;
+    background-color: var(--off-white);
+    border-radius: 8px;
+    border: 1px solid transparent;
+    transition: all var(--transition-normal);
+}
+
+.benefit-card:hover {
+    border-color: var(--primary-green);
+    transform: translateY(-5px);
+}
+
+.benefit-card i {
+    font-size: 2.5rem;
+    color: var(--primary-green);
+    margin-bottom: 1rem;
+}
+
+.benefit-card h5 {
+    font-size: 1.25rem;
+    font-weight: 500;
+    margin-bottom: 0.75rem;
+    color: var(--charcoal);
+}
+
+.benefit-card p {
+    color: var(--medium-gray);
+    font-size: 0.95rem;
+    margin-bottom: 0;
+}
+
+/* Seasonal Grid */
+.seasonal-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 1.5rem;
+    margin-top: 1rem;
+}
+
+.season {
+    background-color: var(--off-white);
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.season-header {
+    background-color: var(--primary-green);
+    color: white;
+    padding: 1rem 1.5rem;
+}
+
+.season-header h5 {
+    color: white;
+    margin-bottom: 0;
+    font-size: 1.25rem;
+    font-weight: 500;
+}
+
+.season-tasks {
+    list-style: none;
+    padding: 1.5rem;
+    margin-bottom: 0;
+}
+
+.season-tasks li {
+    margin-bottom: 0.75rem;
+    display: flex;
+    align-items: center;
+}
+
+.season-tasks li i {
+    color: var(--primary-green);
+    margin-right: 0.75rem;
+    flex-shrink: 0;
+}
+
+/* Safety Features */
+.safety-features {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    margin-top: 1rem;
+}
+
+.safety-item {
+    display: flex;
+    gap: 1.5rem;
+    align-items: flex-start;
+}
+
+.safety-item i {
+    font-size: 2rem;
+    color: var(--primary-green);
+    margin-top: 0.25rem;
+    flex-shrink: 0;
+}
+
+.safety-content h5 {
+    font-size: 1.25rem;
+    font-weight: 500;
+    margin-bottom: 0.5rem;
+    color: var(--charcoal);
+}
+
+.safety-content p {
+    color: var(--medium-gray);
+    margin-bottom: 0;
+}
+
+/* Service Sidebar */
+.service-detail-sidebar {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.service-quick-facts {
+    background-color: var(--off-white);
+    padding: 1.5rem;
+    border-radius: 8px;
+}
+
+.fact {
+    display: flex;
+    gap: 1rem;
+    align-items: flex-start;
+    margin-bottom: 1.5rem;
+}
+
+.fact:last-child {
+    margin-bottom: 0;
+}
+
+.fact i {
+    color: var(--primary-green);
+    font-size: 1.25rem;
+    margin-top: 0.25rem;
+    flex-shrink: 0;
+}
+
+.fact strong {
+    display: block;
+    margin-bottom: 0.25rem;
+    color: var(--charcoal);
+}
+
+.fact p {
+    color: var(--medium-gray);
+    margin-bottom: 0;
+    font-size: 0.95rem;
+}
+
+.service-cta-sidebar {
+    background-color: var(--light-green);
+    padding: 1.5rem;
+    border-radius: 8px;
+    text-align: center;
+    border-left: 4px solid var(--primary-green);
+}
+
+.service-cta-sidebar h4 {
+    font-size: 1.5rem;
+    font-weight: 500;
+    margin-bottom: 0.75rem;
+    color: var(--charcoal);
+}
+
+.service-cta-sidebar p {
+    color: var(--medium-gray);
+    margin-bottom: 1.5rem;
+    font-size: 0.95rem;
+}
+
+.btn-block {
+    display: block;
+    width: 100%;
+    margin-bottom: 0.75rem;
+}
+
+.btn-block:last-child {
+    margin-bottom: 0;
+}
+
+/* Service Packages */
+.service-comparison {
+    background-color: var(--off-white);
+}
+
+.packages-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+.package {
+    background-color: white;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: var(--shadow-md);
+    position: relative;
+    transition: transform var(--transition-normal);
+    display: flex;
+    flex-direction: column;
+}
+
+.package:hover {
+    transform: translateY(-10px);
+}
+
+.package.recommended {
+    border: 2px solid var(--primary-green);
+}
+
+.package-badge {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    background-color: var(--primary-green);
+    color: white;
+    padding: 0.25rem 1rem;
+    border-radius: 20px;
+    font-size: 0.875rem;
+    font-weight: 500;
+}
+
+.package-header {
+    padding: 2rem 2rem 1.5rem;
+    text-align: center;
+    border-bottom: 1px solid #eee;
+}
+
+.package-title {
+    font-size: 1.75rem;
+    font-weight: 500;
+    margin-bottom: 0.5rem;
+    color: var(--charcoal);
+}
+
+.package-price {
+    font-size: 2.5rem;
+    font-weight: 500;
+    color: var(--primary-green);
+    margin-bottom: 0.5rem;
+}
+
+.package-desc {
+    color: var(--medium-gray);
+    font-size: 0.95rem;
+    margin-bottom: 0;
+}
+
+.package-features {
+    list-style: none;
+    padding: 2rem;
+    margin-bottom: 0;
+    flex-grow: 1;
+}
+
+.package-features li {
+    margin-bottom: 1rem;
+    display: flex;
+    align-items: center;
+}
+
+.package-features li i {
+    margin-right: 1rem;
+    font-size: 0.875rem;
+}
+
+.package-features li i.fa-check {
+    color: var(--primary-green);
+}
+
+.package-features li i.fa-times {
+    color: #ccc;
+}
+
+.package .btn {
+    margin: 0 2rem 2rem;
+}
+
+/* Responsive Styles */
+@media (max-width: 1200px) {
+    .service-detail-content {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+    
+    .service-detail-sidebar {
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+    
+    .service-quick-facts,
+    .service-cta-sidebar {
+        flex: 1;
+        min-width: 300px;
+    }
+}
+
+@media (max-width: 992px) {
+    .page-hero-title {
+        font-size: 3rem;
+    }
+    
+    .service-detail-header {
+        flex-direction: column;
+        text-align: center;
+        gap: 1.5rem;
+        padding: 2rem;
+    }
+    
+    .services-nav-container {
+        justify-content: flex-start;
+        overflow-x: auto;
+        padding-bottom: 0.5rem;
+    }
+    
+    .service-nav-btn {
+        min-width: 100px;
+        padding: 0.75rem 1rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .page-hero-title {
+        font-size: 2.5rem;
+    }
+    
+    .page-hero-subtitle {
+        font-size: 1.25rem;
+    }
+    
+    .service-detail-title {
+        font-size: 2rem;
+    }
+    
+    .service-detail-content {
+        padding: 2rem;
+    }
+    
+    .features-grid,
+    .plans-grid,
+    .materials-grid,
+    .benefits-grid,
+    .seasonal-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .packages-grid {
+        grid-template-columns: 1fr;
+        max-width: 400px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
+
+@media (max-width: 576px) {
+    .page-hero-title {
+        font-size: 2rem;
+    }
+    
+    .service-detail-header {
+        padding: 1.5rem;
+    }
+    
+    .service-icon-large {
+        width: 60px;
+        height: 60px;
+        font-size: 2rem;
+    }
+    
+    .service-detail-title {
+        font-size: 1.75rem;
+    }
+    
+    .service-detail-subtitle {
+        font-size: 1.125rem;
+    }
+    
+    .service-detail-content {
+        padding: 1.5rem;
+    }
+    
+    .page-hero-cta {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .page-hero-cta .btn {
+        width: 100%;
+        max-width: 300px;
+    }
+}

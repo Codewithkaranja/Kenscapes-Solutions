@@ -1,0 +1,770 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio | Kenscapes Solutions - Landscaping Projects in Kenya</title>
+    <meta name="description" content="View our landscaping portfolio. Residential and commercial projects in Nairobi and Kenya. Before & after transformations, garden designs, and outdoor spaces.">
+    
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Jost:wght@300;400;500&family=Inter:wght@300;400&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- CSS -->
+    <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="responsive.css">
+    <link rel="stylesheet" href="portfolio.css">
+    
+    <!-- Lightbox CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.4/css/lightbox.min.css">
+    
+    <!-- Favicon -->
+    <link rel="apple-touch-icon" sizes="180x180" href="assets/favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="assets/favicon/favicon-16x16.png">
+    <link rel="manifest" href="assets/favicon/site.webmanifest">
+</head>
+<body>
+    <!-- Floating WhatsApp Button -->
+    <a href="https://wa.me/254797627208?text=Hello%20Kenscapes%20Solutions%2C%20I%20saw%20your%20portfolio%20and%20would%20like%20to%20discuss%20a%20project" 
+       class="whatsapp-float" 
+       target="_blank" 
+       aria-label="Chat with us on WhatsApp">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="container nav-container">
+            <a href="index.html" class="logo">
+                <span class="logo-icon">🌿</span>
+                <span class="logo-text">Kenscapes Solutions</span>
+            </a>
+            
+            <button class="menu-toggle" aria-label="Toggle navigation menu">
+                <span class="hamburger"></span>
+            </button>
+            
+            <div class="nav-menu">
+                <ul class="nav-list">
+                    <li><a href="index.html" class="nav-link">Home</a></li>
+                    <li><a href="about.html" class="nav-link">About</a></li>
+                    <li><a href="services.html" class="nav-link">Services</a></li>
+                    <li><a href="portfolio.html" class="nav-link active">Portfolio</a></li>
+                    <li><a href="contact.html" class="nav-link">Contact</a></li>
+                </ul>
+                <a href="contact.html" class="btn btn-primary nav-cta">Get Free Consultation</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Portfolio Hero -->
+    <section class="page-hero portfolio-hero">
+        <div class="container">
+            <div class="page-hero-content">
+                <h1 class="page-hero-title">Our Portfolio</h1>
+                <p class="page-hero-subtitle">Transforming outdoor spaces through creative landscaping and quality workmanship</p>
+                <div class="page-hero-cta">
+                    <a href="#portfolio-grid" class="btn btn-secondary">View Projects</a>
+                    <a href="contact.html" class="btn btn-primary">Start Your Project</a>
+                </div>
+            </div>
+        </div>
+        <div class="hero-bg-overlay"></div>
+    </section>
+
+    <!-- Portfolio Intro -->
+    <section class="section portfolio-intro">
+        <div class="container">
+            <div class="intro-content">
+                <h2 class="section-title">Our Landscaping Projects</h2>
+                <p class="intro-text">From residential gardens to commercial outdoor spaces, our completed projects demonstrate how thoughtful design and professional execution can transform any environment. Each project showcases our commitment to delivering functional, beautiful, and sustainable outdoor environments for our clients.</p>
+                <p class="intro-text">Browse through our portfolio to see the transformation capability, attention to detail, and practical execution that sets Kenscapes Solutions apart.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Portfolio Filters -->
+    <section class="portfolio-filters">
+        <div class="container">
+            <div class="filter-header">
+                <h3 class="filter-title">Filter Projects</h3>
+                <p class="filter-subtitle">Browse projects by category or type</p>
+            </div>
+            
+            <div class="filter-buttons">
+                <button class="filter-btn active" data-filter="all">All Projects</button>
+                <button class="filter-btn" data-filter="residential">Residential</button>
+                <button class="filter-btn" data-filter="commercial">Commercial</button>
+                <button class="filter-btn" data-filter="gardens">Gardens</button>
+                <button class="filter-btn" data-filter="lawns">Lawns</button>
+                <button class="filter-btn" data-filter="hardscaping">Hardscaping</button>
+                <button class="filter-btn" data-filter="before-after">Before & After</button>
+            </div>
+            
+            <div class="filter-stats">
+                <div class="stat">
+                    <span class="stat-number" id="total-projects">0</span>
+                    <span class="stat-label">Total Projects</span>
+                </div>
+                <div class="stat">
+                    <span class="stat-number" id="residential-count">0</span>
+                    <span class="stat-label">Residential</span>
+                </div>
+                <div class="stat">
+                    <span class="stat-number" id="commercial-count">0</span>
+                    <span class="stat-label">Commercial</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Portfolio Grid -->
+    <section id="portfolio-grid" class="section portfolio-grid-section">
+        <div class="container">
+            <div class="portfolio-grid" id="portfolioContainer">
+                <!-- Project 1: Residential Garden Transformation -->
+                <div class="portfolio-item" data-category="residential gardens before-after">
+                    <div class="portfolio-card">
+                        <div class="portfolio-image">
+                            <img src="images/portfolio/residential-garden-1.jpg" alt="Residential garden transformation in Nairobi" loading="lazy">
+                            <div class="portfolio-overlay">
+                                <div class="overlay-content">
+                                    <h3 class="project-title">Residential Garden Transformation</h3>
+                                    <p class="project-location">Karen, Nairobi</p>
+                                    <div class="project-tags">
+                                        <span class="tag">Garden Design</span>
+                                        <span class="tag">Planting</span>
+                                        <span class="tag">Lawn</span>
+                                    </div>
+                                    <button class="btn btn-light view-project" data-project="1">View Project</button>
+                                </div>
+                            </div>
+                            <div class="portfolio-badge">
+                                <i class="fas fa-home"></i> Residential
+                            </div>
+                        </div>
+                        <div class="portfolio-info">
+                            <h3 class="portfolio-item-title">Karen Residence Garden Makeover</h3>
+                            <p class="portfolio-item-desc">Complete garden redesign with native plants, lawn installation, and decorative stone features.</p>
+                            <div class="portfolio-meta">
+                                <span class="meta-item">
+                                    <i class="far fa-calendar"></i> Completed: March 2025
+                                </span>
+                                <span class="meta-item">
+                                    <i class="fas fa-expand-arrows-alt"></i> 800 m²
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Project 2: Commercial Lawn Installation -->
+                <div class="portfolio-item" data-category="commercial lawns">
+                    <div class="portfolio-card">
+                        <div class="portfolio-image">
+                            <img src="images/portfolio/commercial-lawn-1.jpg" alt="Commercial lawn installation for office complex" loading="lazy">
+                            <div class="portfolio-overlay">
+                                <div class="overlay-content">
+                                    <h3 class="project-title">Commercial Lawn Installation</h3>
+                                    <p class="project-location">Westlands, Nairobi</p>
+                                    <div class="project-tags">
+                                        <span class="tag">Lawn Installation</span>
+                                        <span class="tag">Irrigation</span>
+                                        <span class="tag">Maintenance</span>
+                                    </div>
+                                    <button class="btn btn-light view-project" data-project="2">View Project</button>
+                                </div>
+                            </div>
+                            <div class="portfolio-badge">
+                                <i class="fas fa-building"></i> Commercial
+                            </div>
+                        </div>
+                        <div class="portfolio-info">
+                            <h3 class="portfolio-item-title">Westlands Office Complex Lawn</h3>
+                            <p class="portfolio-item-desc">Premium lawn installation with automated irrigation system for a commercial office complex.</p>
+                            <div class="portfolio-meta">
+                                <span class="meta-item">
+                                    <i class="far fa-calendar"></i> Completed: January 2025
+                                </span>
+                                <span class="meta-item">
+                                    <i class="fas fa-expand-arrows-alt"></i> 1,200 m²
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Project 3: Hardscaping Project -->
+                <div class="portfolio-item" data-category="hardscaping residential">
+                    <div class="portfolio-card">
+                        <div class="portfolio-image">
+                            <img src="images/portfolio/hardscaping-1.jpg" alt="Outdoor hardscaping project with stone patio" loading="lazy">
+                            <div class="portfolio-overlay">
+                                <div class="overlay-content">
+                                    <h3 class="project-title">Hardscaping & Outdoor Living</h3>
+                                    <p class="project-location">Runda, Nairobi</p>
+                                    <div class="project-tags">
+                                        <span class="tag">Patio</span>
+                                        <span class="tag">Stone Work</span>
+                                        <span class="tag">Pathways</span>
+                                    </div>
+                                    <button class="btn btn-light view-project" data-project="3">View Project</button>
+                                </div>
+                            </div>
+                            <div class="portfolio-badge">
+                                <i class="fas fa-hard-hat"></i> Hardscaping
+                            </div>
+                        </div>
+                        <div class="portfolio-info">
+                            <h3 class="portfolio-item-title">Runda Residence Outdoor Patio</h3>
+                            <p class="portfolio-item-desc">Natural stone patio with fire pit, seating walls, and decorative pathways.</p>
+                            <div class="portfolio-meta">
+                                <span class="meta-item">
+                                    <i class="far fa-calendar"></i> Completed: November 2024
+                                </span>
+                                <span class="meta-item">
+                                    <i class="fas fa-expand-arrows-alt"></i> 150 m²
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Project 4: Before & After Garden -->
+                <div class="portfolio-item before-after" data-category="gardens before-after residential">
+                    <div class="portfolio-card">
+                        <div class="portfolio-image">
+                            <div class="before-after-container">
+                                <div class="before-image">
+                                    <img src="images/portfolio/before-garden-1.jpg" alt="Garden before transformation" loading="lazy">
+                                    <div class="before-label">Before</div>
+                                </div>
+                                <div class="after-image">
+                                    <img src="images/portfolio/after-garden-1.jpg" alt="Garden after transformation" loading="lazy">
+                                    <div class="after-label">After</div>
+                                </div>
+                            </div>
+                            <div class="portfolio-overlay">
+                                <div class="overlay-content">
+                                    <h3 class="project-title">Complete Garden Transformation</h3>
+                                    <p class="project-location">Lavington, Nairobi</p>
+                                    <div class="project-tags">
+                                        <span class="tag">Full Makeover</span>
+                                        <span class="tag">Design</span>
+                                        <span class="tag">Installation</span>
+                                    </div>
+                                    <button class="btn btn-light view-project" data-project="4">View Project</button>
+                                </div>
+                            </div>
+                            <div class="portfolio-badge">
+                                <i class="fas fa-exchange-alt"></i> Before & After
+                            </div>
+                        </div>
+                        <div class="portfolio-info">
+                            <h3 class="portfolio-item-title">Lavington Garden Makeover</h3>
+                            <p class="portfolio-item-desc">From bare yard to lush garden with flowers, shrubs, trees, and water feature.</p>
+                            <div class="portfolio-meta">
+                                <span class="meta-item">
+                                    <i class="far fa-calendar"></i> Completed: August 2024
+                                </span>
+                                <span class="meta-item">
+                                    <i class="fas fa-expand-arrows-alt"></i> 600 m²
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Project 5: Commercial Landscaping -->
+                <div class="portfolio-item" data-category="commercial gardens">
+                    <div class="portfolio-card">
+                        <div class="portfolio-image">
+                            <img src="images/portfolio/commercial-garden-1.jpg" alt="Commercial garden landscaping for hotel" loading="lazy">
+                            <div class="portfolio-overlay">
+                                <div class="overlay-content">
+                                    <h3 class="project-title">Hotel Garden Landscaping</h3>
+                                    <p class="project-location">Karen, Nairobi</p>
+                                    <div class="project-tags">
+                                        <span class="tag">Commercial</span>
+                                        <span class="tag">Hotel</span>
+                                        <span class="tag">Year-round Color</span>
+                                    </div>
+                                    <button class="btn btn-light view-project" data-project="5">View Project</button>
+                                </div>
+                            </div>
+                            <div class="portfolio-badge">
+                                <i class="fas fa-hotel"></i> Hotel
+                            </div>
+                        </div>
+                        <div class="portfolio-info">
+                            <h3 class="portfolio-item-title">Boutique Hotel Garden Design</h3>
+                            <p class="portfolio-item-desc">Year-round color garden with seating areas, pathways, and decorative lighting.</p>
+                            <div class="portfolio-meta">
+                                <span class="meta-item">
+                                    <i class="far fa-calendar"></i> Completed: June 2024
+                                </span>
+                                <span class="meta-item">
+                                    <i class="fas fa-expand-arrows-alt"></i> 2,000 m²
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Project 6: Lawn Renovation -->
+                <div class="portfolio-item" data-category="lawns residential before-after">
+                    <div class="portfolio-card">
+                        <div class="portfolio-image">
+                            <img src="images/portfolio/lawn-renovation-1.jpg" alt="Lawn renovation project showing lush green grass" loading="lazy">
+                            <div class="portfolio-overlay">
+                                <div class="overlay-content">
+                                    <h3 class="project-title">Lawn Renovation Project</h3>
+                                    <p class="project-location">Kileleshwa, Nairobi</p>
+                                    <div class="project-tags">
+                                        <span class="tag">Lawn Care</span>
+                                        <span class="tag">Renovation</span>
+                                        <span class="tag">Maintenance</span>
+                                    </div>
+                                    <button class="btn btn-light view-project" data-project="6">View Project</button>
+                                </div>
+                            </div>
+                            <div class="portfolio-badge">
+                                <i class="fas fa-seedling"></i> Lawn Renovation
+                            </div>
+                        </div>
+                        <div class="portfolio-info">
+                            <h3 class="portfolio-item-title">Kileleshwa Lawn Makeover</h3>
+                            <p class="portfolio-item-desc">Complete lawn renovation including soil preparation, new turf, and irrigation system.</p>
+                            <div class="portfolio-meta">
+                                <span class="meta-item">
+                                    <i class="far fa-calendar"></i> Completed: April 2024
+                                </span>
+                                <span class="meta-item">
+                                    <i class="fas fa-expand-arrows-alt"></i> 400 m²
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Project 7: Residential Courtyard -->
+                <div class="portfolio-item" data-category="residential hardscaping gardens">
+                    <div class="portfolio-card">
+                        <div class="portfolio-image">
+                            <img src="images/portfolio/courtyard-1.jpg" alt="Residential courtyard with seating and plants" loading="lazy">
+                            <div class="portfolio-overlay">
+                                <div class="overlay-content">
+                                    <h3 class="project-title">Courtyard Garden Design</h3>
+                                    <p class="project-location">Muthaiga, Nairobi</p>
+                                    <div class="project-tags">
+                                        <span class="tag">Courtyard</span>
+                                        <span class="tag">Container Plants</span>
+                                        <span class="tag">Paving</span>
+                                    </div>
+                                    <button class="btn btn-light view-project" data-project="7">View Project</button>
+                                </div>
+                            </div>
+                            <div class="portfolio-badge">
+                                <i class="fas fa-home"></i> Residential
+                            </div>
+                        </div>
+                        <div class="portfolio-info">
+                            <h3 class="portfolio-item-title">Muthaiga Residence Courtyard</h3>
+                            <p class="portfolio-item-desc">Intimate courtyard design with container plants, decorative paving, and seating area.</p>
+                            <div class="portfolio-meta">
+                                <span class="meta-item">
+                                    <i class="far fa-calendar"></i> Completed: February 2024
+                                </span>
+                                <span class="meta-item">
+                                    <i class="fas fa-expand-arrows-alt"></i> 80 m²
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Project 8: School Landscaping -->
+                <div class="portfolio-item" data-category="commercial lawns gardens">
+                    <div class="portfolio-card">
+                        <div class="portfolio-image">
+                            <img src="images/portfolio/school-landscaping-1.jpg" alt="School landscaping project with playing fields" loading="lazy">
+                            <div class="portfolio-overlay">
+                                <div class="overlay-content">
+                                    <h3 class="project-title">School Grounds Landscaping</h3>
+                                    <p class="project-location">Kiambu</p>
+                                    <div class="project-tags">
+                                        <span class="tag">School</span>
+                                        <span class="tag">Playing Fields</span>
+                                        <span class="tag">Low Maintenance</span>
+                                    </div>
+                                    <button class="btn btn-light view-project" data-project="8">View Project</button>
+                                </div>
+                            </div>
+                            <div class="portfolio-badge">
+                                <i class="fas fa-school"></i> School
+                            </div>
+                        </div>
+                        <div class="portfolio-info">
+                            <h3 class="portfolio-item-title">International School Grounds</h3>
+                            <p class="portfolio-item-desc">Complete grounds landscaping including playing fields, gardens, and outdoor learning areas.</p>
+                            <div class="portfolio-meta">
+                                <span class="meta-item">
+                                    <i class="far fa-calendar"></i> Completed: December 2023
+                                </span>
+                                <span class="meta-item">
+                                    <i class="fas fa-expand-arrows-alt"></i> 5,000 m²
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Load More Button -->
+            <div class="load-more-container">
+                <button class="btn btn-outline" id="loadMore">Load More Projects</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Before & After Showcase -->
+    <section class="section before-after-showcase">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Before & After Transformations</h2>
+                <p class="section-subtitle">See the dramatic impact of professional landscaping on outdoor spaces</p>
+            </div>
+            
+            <div class="before-after-slider">
+                <div class="slider-container">
+                    <div class="slider-track">
+                        <!-- Slide 1 -->
+                        <div class="slide">
+                            <div class="slide-content">
+                                <div class="before">
+                                    <h4>Before</h4>
+                                    <img src="images/portfolio/before-1.jpg" alt="Overgrown yard before landscaping" loading="lazy">
+                                    <p class="slide-desc">Overgrown and unusable backyard space</p>
+                                </div>
+                                <div class="after">
+                                    <h4>After</h4>
+                                    <img src="images/portfolio/after-1.jpg" alt="Beautiful garden after landscaping" loading="lazy">
+                                    <p class="slide-desc">Functional outdoor living area with garden and seating</p>
+                                </div>
+                            </div>
+                            <div class="slide-info">
+                                <h3 class="slide-title">Complete Backyard Transformation</h3>
+                                <p class="slide-location">Langata, Nairobi</p>
+                                <p class="slide-details">Project included garden design, lawn installation, stone pathways, and seating area creation.</p>
+                            </div>
+                        </div>
+                        
+                        <!-- Slide 2 -->
+                        <div class="slide">
+                            <div class="slide-content">
+                                <div class="before">
+                                    <h4>Before</h4>
+                                    <img src="images/portfolio/before-2.jpg" alt="Bare front yard before landscaping" loading="lazy">
+                                    <p class="slide-desc">Bare and uninviting front entrance</p>
+                                </div>
+                                <div class="after">
+                                    <h4>After</h4>
+                                    <img src="images/portfolio/after-2.jpg" alt="Beautiful front garden after landscaping" loading="lazy">
+                                    <p class="slide-desc">Inviting entrance with garden beds and walkway</p>
+                                </div>
+                            </div>
+                            <div class="slide-info">
+                                <h3 class="slide-title">Front Entrance Makeover</h3>
+                                <p class="slide-location">Kilimani, Nairobi</p>
+                                <p class="slide-details">Created welcoming entrance with flowering plants, shrubs, and decorative stone walkway.</p>
+                            </div>
+                        </div>
+                        
+                        <!-- Slide 3 -->
+                        <div class="slide">
+                            <div class="slide-content">
+                                <div class="before">
+                                    <h4>Before</h4>
+                                    <img src="images/portfolio/before-3.jpg" alt="Patchy lawn before renovation" loading="lazy">
+                                    <p class="slide-desc">Patchy, uneven lawn with weed problems</p>
+                                </div>
+                                <div class="after">
+                                    <h4>After</h4>
+                                    <img src="images/portfolio/after-3.jpg" alt="Lush green lawn after renovation" loading="lazy">
+                                    <p class="slide-desc">Healthy, lush green lawn perfect for recreation</p>
+                                </div>
+                            </div>
+                            <div class="slide-info">
+                                <h3 class="slide-title">Lawn Restoration Project</h3>
+                                <p class="slide-location">Kitisuru, Nairobi</p>
+                                <p class="slide-details">Complete lawn renovation including soil amendment, new turf, and irrigation installation.</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <button class="slider-btn prev-btn" aria-label="Previous slide">
+                        <i class="fas fa-chevron-left"></i>
+                    </button>
+                    <button class="slider-btn next-btn" aria-label="Next slide">
+                        <i class="fas fa-chevron-right"></i>
+                    </button>
+                    
+                    <div class="slider-dots">
+                        <button class="dot active" data-slide="0"></button>
+                        <button class="dot" data-slide="1"></button>
+                        <button class="dot" data-slide="2"></button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Client Testimonials -->
+    <section class="section testimonials">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Client Testimonials</h2>
+                <p class="section-subtitle">What our clients say about our landscaping projects</p>
+            </div>
+            
+            <div class="testimonial-grid">
+                <div class="testimonial-card">
+                    <div class="testimonial-content">
+                        <div class="testimonial-text">
+                            <p>"Kenscapes transformed our backyard into a beautiful oasis. Their attention to detail and professionalism was outstanding. We now have the perfect outdoor space for family gatherings."</p>
+                        </div>
+                        <div class="testimonial-author">
+                            <div class="author-info">
+                                <h4 class="author-name">Sarah M.</h4>
+                                <p class="author-project">Residential Garden Project, Karen</p>
+                            </div>
+                            <div class="author-rating">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="testimonial-card">
+                    <div class="testimonial-content">
+                        <div class="testimonial-text">
+                            <p>"Our hotel needed a complete garden makeover to attract more guests. Kenscapes delivered beyond our expectations. The gardens are now a major talking point for our visitors."</p>
+                        </div>
+                        <div class="testimonial-author">
+                            <div class="author-info">
+                                <h4 class="author-name">David K.</h4>
+                                <p class="author-project">Hotel Landscaping, Westlands</p>
+                            </div>
+                            <div class="author-rating">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="testimonial-card">
+                    <div class="testimonial-content">
+                        <div class="testimonial-text">
+                            <p>"The before and after transformation of our lawn is incredible. Professional, efficient, and the results speak for themselves. Highly recommend for any landscaping needs."</p>
+                        </div>
+                        <div class="testimonial-author">
+                            <div class="author-info">
+                                <h4 class="author-name">James W.</h4>
+                                <p class="author-project">Lawn Renovation, Kileleshwa</p>
+                            </div>
+                            <div class="author-rating">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star-half-alt"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Project Process -->
+    <section class="section project-process">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Our Project Process</h2>
+                <p class="section-subtitle">From concept to completion - how we bring your vision to life</p>
+            </div>
+            
+            <div class="process-steps">
+                <div class="process-step">
+                    <div class="step-number">1</div>
+                    <div class="step-content">
+                        <h3 class="step-title">Consultation & Site Visit</h3>
+                        <p class="step-desc">We visit your property to understand your vision, assess the site, and discuss your needs and budget.</p>
+                    </div>
+                </div>
+                
+                <div class="process-step">
+                    <div class="step-number">2</div>
+                    <div class="step-content">
+                        <h3 class="step-title">Design & Planning</h3>
+                        <p class="step-desc">Our designers create a customized landscape plan that balances aesthetics, functionality, and sustainability.</p>
+                    </div>
+                </div>
+                
+                <div class="process-step">
+                    <div class="step-number">3</div>
+                    <div class="step-content">
+                        <h3 class="step-title">Quote & Agreement</h3>
+                        <p class="step-desc">We provide a detailed quote and timeline. Once approved, we schedule the project start date.</p>
+                    </div>
+                </div>
+                
+                <div class="process-step">
+                    <div class="step-number">4</div>
+                    <div class="step-content">
+                        <h3 class="step-title">Installation & Construction</h3>
+                        <p class="step-desc">Our skilled team executes the plan with attention to detail, quality materials, and professional workmanship.</p>
+                    </div>
+                </div>
+                
+                <div class="process-step">
+                    <div class="step-number">5</div>
+                    <div class="step-content">
+                        <h3 class="step-title">Final Walkthrough & Handover</h3>
+                        <p class="step-desc">We conduct a final inspection with you, address any concerns, and provide maintenance guidance.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="section cta-section">
+        <div class="container">
+            <div class="cta-content">
+                <h2 class="cta-title">Inspired by Our Work?</h2>
+                <p class="cta-text">Let us bring the same transformation to your space. Contact us today to discuss your landscaping project.</p>
+                
+                <div class="cta-buttons">
+                    <a href="tel:+254797627208" class="btn btn-light">
+                        <i class="fas fa-phone-alt"></i> Call Now
+                    </a>
+                    <a href="https://wa.me/254797627208" class="btn btn-light" target="_blank">
+                        <i class="fab fa-whatsapp"></i> WhatsApp
+                    </a>
+                    <a href="contact.html" class="btn btn-primary">Request a Consultation</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <a href="index.html" class="footer-logo">
+                        <span class="logo-icon">🌿</span>
+                        <span class="logo-text">Kenscapes Solutions</span>
+                    </a>
+                    <p class="footer-about">Transforming outdoor spaces into beautiful, functional, and sustainable landscapes across Kenya.</p>
+                    <div class="social-links">
+                        <a href="#" aria-label="Follow us on Facebook"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" aria-label="Follow us on Instagram"><i class="fab fa-instagram"></i></a>
+                        <a href="#" aria-label="Follow us on Twitter"><i class="fab fa-twitter"></i></a>
+                        <a href="#" aria-label="Connect on LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+                
+                <div class="footer-col">
+                    <h3 class="footer-title">Quick Links</h3>
+                    <ul class="footer-links">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="services.html">Services</a></li>
+                        <li><a href="portfolio.html">Portfolio</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-col">
+                    <h3 class="footer-title">Our Services</h3>
+                    <ul class="footer-links">
+                        <li><a href="services.html#design">Landscape Design</a></li>
+                        <li><a href="services.html#garden">Garden Installation</a></li>
+                        <li><a href="services.html#lawn">Lawn Maintenance</a></li>
+                        <li><a href="services.html#hardscaping">Hardscaping</a></li>
+                        <li><a href="services.html#irrigation">Irrigation Systems</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-col">
+                    <h3 class="footer-title">Contact Info</h3>
+                    <div class="contact-info">
+                        <p><i class="fas fa-map-marker-alt"></i> Nairobi, Kenya</p>
+                        <p><i class="fas fa-phone-alt"></i> <a href="tel:+254797627208">+254797627208</a></p>
+                        <p><i class="fas fa-envelope"></i> <a href="mailto:info@kenscapes.co.ke">info@kenscapes.co.ke</a></p>
+                        <p><i class="fab fa-whatsapp"></i> <a href="https://wa.me/254797627208" target="_blank">WhatsApp Chat</a></p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; <span id="currentYear">2026</span> Kenscapes Solutions. All rights reserved.</p>
+                <p class="footer-tagline">Bringing Nature Closer to You</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Project Modal -->
+    <div class="project-modal" id="projectModal">
+        <div class="modal-content">
+            <button class="modal-close" aria-label="Close modal">
+                <i class="fas fa-times"></i>
+            </button>
+            
+            <div class="modal-body" id="modalBody">
+                <!-- Dynamic content will be loaded here -->
+            </div>
+        </div>
+    </div>
+
+    <!-- Lightbox -->
+    <div class="lightbox-modal" id="lightboxModal">
+        <div class="lightbox-content">
+            <button class="lightbox-close" aria-label="Close lightbox">
+                <i class="fas fa-times"></i>
+            </button>
+            <button class="lightbox-nav prev" aria-label="Previous image">
+                <i class="fas fa-chevron-left"></i>
+            </button>
+            <button class="lightbox-nav next" aria-label="Next image">
+                <i class="fas fa-chevron-right"></i>
+            </button>
+            <div class="lightbox-image-container">
+                <img id="lightboxImage" src="" alt="">
+                <div class="lightbox-caption" id="lightboxCaption"></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- JavaScript -->
+    <script src="index.js"></script>
+    <script src="portfolio.js"></script>
+    <!-- Lightbox JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.4/js/lightbox.min.js"></script>
+</body>
+</html>
