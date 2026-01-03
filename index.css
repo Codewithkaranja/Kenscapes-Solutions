@@ -363,10 +363,11 @@ img {
 
 .hero-title {
     font-size: 3.5rem;
-    font-weight: 500;
-    color: white;
+    font-weight: 400;
+    color: orange;
     margin-bottom: 1.5rem;
     text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+    line-height: 1.2;
 }
 
 .hero-subtitle {
@@ -391,7 +392,7 @@ img {
     left: 0;
     width: 100%;
     height: 100%;
-    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.3)), url('https://assets.mixkit.co/videos/4075/4075-720.mp4');
+    background-image: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0)), url('https://assets.mixkit.co/videos/4075/4075-720.mp4');
     background-size: cover;
     background-position: center;
     z-index: 1;
@@ -406,7 +407,173 @@ img {
     background: linear-gradient(135deg, rgba(30, 111, 61, 0.7) 0%, rgba(168, 213, 186, 0.5) 100%);
     z-index: 1;
 }
+/* Fullscreen Hero */
+.hero {
+  height: 100vh;
+  width: 100%;
+  position: relative;
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+  color: #fff;
+}
 
+/* Background Video Fills Entire Hero */
+.hero-bg-video {
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  object-fit: cover;
+  opacity: 0.35;
+  z-index: 0;
+}
+
+/* Overlay shading */
+.hero-overlay {
+  position: absolute;
+  top:0; left:0;
+  width:100%; height:100%;
+  background: linear-gradient(to right,
+    rgba(0, 0, 0, 0.612) 60%,
+    rgba(0, 0, 0, 0.358) 100%);
+  z-index:1;
+}
+
+/* Container: split layout */
+.hero-container {
+  position: relative;
+  z-index: 2;
+  width: 90%;
+  max-width: 1300px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+/* Left area for visual/video (we leave empty since video background is full-screen) */
+.hero-visual {
+  flex: 1;
+  min-width: 0;
+  /* optionally you could place a framed version of the video here */
+}
+
+/* HERO TEXT – LUXURY AGENCY LEVEL */
+.hero-text {
+  display: flex;
+  flex-direction: column;
+  gap: 22px;
+  position: relative;
+  padding-left: 10px;
+  animation: fadeSlide 1.2s ease-out forwards;
+  opacity: 0;
+}
+
+@keyframes fadeSlide {
+  from { opacity: 0; transform: translateX(-40px); }
+  to { opacity: 1; transform: translateX(0); }
+}
+
+/* Trust Badge */
+.super-tag {
+  font-size: 0.92rem;
+  color: #00e6a4;
+  /*text-transform: uppercase;*/
+  letter-spacing: 3px;
+  font-weight: 500;
+  opacity: 0.85;
+  position: relative;
+}
+
+.super-tag::before {
+  content: "";
+  position: absolute;
+  left: -40px;
+  top: 50%;
+  width: 30px;
+  height: 2px;
+  background: #00e6a4;
+  transform: translateY(-50%);
+  border-radius: 10px;
+  opacity: 0.6;
+}
+
+/* Bold Hero Headline */
+.hero-text h1 {
+  font-size: clamp(3.4rem, 6vw, 6rem);
+  font-weight: 500;
+  /*text-transform: uppercase;*/
+  line-height: 1.03;
+  letter-spacing: -2px;
+  background: linear-gradient(90deg, #ffffff 0%, #a6ffe2 90%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  filter: drop-shadow(0 6px 14px rgba(0,255,173,0.15));
+  animation: glowPulse 3s ease-in-out infinite alternate;
+}
+
+@keyframes glowPulse {
+  0% { filter: drop-shadow(0 4px 10px rgba(0,255,173,0.08)); }
+  100% { filter: drop-shadow(0 10px 24px rgba(0,255,173,0.22)); }
+}
+
+.hero-text h1 span {
+  position: relative;
+  display: inline-block;
+  color: transparent;
+  background: linear-gradient(90deg, #00ffb3, #00cfff, #00ffb3);
+  background-size: 200%;
+  -webkit-background-clip: text;
+  background-clip: text;
+  animation: glowText 2s ease forwards 0.3s;
+  filter: drop-shadow(0 0 10px rgba(0,255,200,0.4));
+}
+
+@keyframes glowText {
+  0% {
+    background-position: 200%;
+    filter: blur(6px) brightness(0.6);
+  }
+  100% {
+    background-position: 0%;
+    color: #ffffff;
+    filter: blur(0) brightness(1);
+  }
+}
+
+.hero-text h1 span::after {
+  content: "Software";
+  position: absolute;
+  inset: 0;
+  color: #02f7b1;
+  text-shadow: 0 0 12px rgba(2,247,177,0.75);
+  clip-path: inset(0 100% 0 0);
+  animation: reveal2 1.5s cubic-bezier(.18,.66,.46,1.17) forwards 1s;
+}
+
+@keyframes reveal2 {
+  from { clip-path: inset(0 100% 0 0); }
+  to   { clip-path: inset(0 0 0 0); }
+}
+
+
+@keyframes slideUnderline {
+  to { transform: scaleX(1); }
+}
+
+/* Sublines */
+.hero-text p:first-of-type {
+  font-size: 1.35rem;
+  font-weight: 500;
+  color: #d6fdfa;
+}
+
+.hero-text p:nth-of-type(2) {
+  color: rgba(255,255,255,0.7);
+  letter-spacing: 1px;
+  font-size: 1.05rem;
+  text-transform: uppercase;
+}
 /* Trust Indicators */
 .trust-indicators {
     display: flex;

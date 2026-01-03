@@ -65,7 +65,7 @@ document.addEventListener('DOMContentLoaded', function() {
     
     // Load More Projects
     const loadMoreBtn = document.getElementById('loadMore');
-    const initialDisplayCount = 8;
+    const initialDisplayCount = 200;
     let currentDisplayCount = initialDisplayCount;
     
     // Hide extra projects initially
