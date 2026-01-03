@@ -562,7 +562,7 @@ document.addEventListener('DOMContentLoaded', function() {
         testimonialObserver.observe(card);
     });
     
-    // Print portfolio functionality
+    /* Print portfolio functionality
     const printPortfolioBtn = document.createElement('button');
     printPortfolioBtn.className = 'btn btn-outline print-portfolio';
     printPortfolioBtn.innerHTML = '<i class="fas fa-print"></i> Print Portfolio';
@@ -571,7 +571,7 @@ document.addEventListener('DOMContentLoaded', function() {
     printPortfolioBtn.style.right = '2rem';
     printPortfolioBtn.style.zIndex = '999';
     
-    document.body.appendChild(printPortfolioBtn);
+    document.body.appendChild(printPortfolioBtn);*/
     
     printPortfolioBtn.addEventListener('click', function() {
         const printContent = document.querySelector('.portfolio-grid-section').innerHTML;
@@ -624,7 +624,7 @@ document.addEventListener('DOMContentLoaded', function() {
         location.reload();
     });
     
-    // Share portfolio functionality
+    /* Share portfolio functionality
     const sharePortfolioBtn = document.createElement('button');
     sharePortfolioBtn.className = 'btn btn-primary share-portfolio';
     sharePortfolioBtn.innerHTML = '<i class="fas fa-share-alt"></i> Share Portfolio';
@@ -633,9 +633,9 @@ document.addEventListener('DOMContentLoaded', function() {
     sharePortfolioBtn.style.right = '2rem';
     sharePortfolioBtn.style.zIndex = '999';
     
-    document.body.appendChild(sharePortfolioBtn);
+    document.body.appendChild(sharePortfolioBtn);*/
     
-    sharePortfolioBtn.addEventListener('click', function() {
+   /* sharePortfolioBtn.addEventListener('click', function() {
         if (navigator.share) {
             navigator.share({
                 title: 'Kenscapes Solutions Portfolio',
@@ -648,5 +648,5 @@ document.addEventListener('DOMContentLoaded', function() {
                 alert('Portfolio link copied to clipboard!');
             });
         }
-    });
+    });*/
 });
