@@ -1,4 +1,15 @@
 /* Services Page Specific Styles */
+/* Logo Styling */
+.logo {
+  display: flex;
+  align-items: center;
+}
+
+.logo-img {
+  height: 100px;
+  width: auto;
+  margin-right: 12px;
+}
 
 /* Page Hero */
 .page-hero {
@@ -11,7 +22,7 @@
 }
 
 .services-hero {
-    background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.4)), url('../images/services-hero.jpg');
+    background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.4)), url('image\ \(80\).webp');
     background-size: cover;
     background-position: center;
 }

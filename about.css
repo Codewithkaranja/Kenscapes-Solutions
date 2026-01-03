@@ -1,4 +1,15 @@
 /* About Page Specific Styles */
+/* Logo Styling */
+.logo {
+  display: flex;
+  align-items: center;
+}
+
+.logo-img {
+  height: 100px;
+  width: auto;
+  margin-right: 12px;
+}
 
 /* Page Hero */
 .page-hero {
@@ -11,7 +22,7 @@
 }
 
 .about-hero {
-    background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.4)), url('../images/about-hero.jpg');
+    background: linear-gradient(rgba(0, 0, 0, 0.048), rgba(0, 0, 0, 0)), url('image\ \(83\).webp');
     background-size: cover;
     background-position: center;
 }
@@ -33,10 +44,11 @@
 }
 
 .page-hero-subtitle {
-    font-size: 1.5rem;
+    font-size: 1.0rem;
     color: rgba(255, 255, 255, 0.9);
     max-width: 600px;
     margin: 0 auto 2.5rem;
+    font-weight: 300;
 }
 
 .page-hero-cta {

@@ -1,4 +1,15 @@
 /* Portfolio Page Specific Styles */
+/* Logo Styling */
+.logo {
+  display: flex;
+  align-items: center;
+}
+
+.logo-img {
+  height: 100px;
+  width: auto;
+  margin-right: 12px;
+}
 
 /* Page Hero */
 .page-hero {
@@ -11,7 +22,7 @@
 }
 
 .portfolio-hero {
-    background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.4)), url('../images/portfolio-hero.jpg');
+    background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.4)), url('image\ \(81\).webp');
     background-size: cover;
     background-position: center;
 }

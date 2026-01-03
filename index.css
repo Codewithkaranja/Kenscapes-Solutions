@@ -1,8 +1,9 @@
 /* CSS Variables - Kenscapes Brand Colors */
 :root {
     /* Primary Colors */
-    --primary-green: #1E6F3D;
-    --secondary-green: #A8D5BA;
+    
+    --primary-green: #50C878;
+    --secondary-green: #21c060;
     --earth-brown: #6B4F2D;
     --off-white: #F7F9F6;
     --charcoal: #2E2E2E;
@@ -48,7 +49,13 @@ body {
     font-weight: 400;
     line-height: 1.6;
     color: var(--charcoal);
-    background-color: var(--off-white);
+     background: linear-gradient(
+      rgba(238, 239, 240, 0.806), 
+      rgba(248, 249, 250, 0.562)
+    ),
+    url("kenscapes\ solutions\ favicon.webp") no-repeat center center;
+  background-size: cover;
+  background-attachment: fixed;
     overflow-x: hidden;
 }
 
@@ -204,10 +211,10 @@ img {
     top: 0;
     left: 0;
     width: 100%;
-    background-color: rgba(255, 255, 255, 0.95);
+    background-color: transparent;
     backdrop-filter: blur(10px);
     z-index: 1000;
-    box-shadow: var(--shadow-sm);
+    
     transition: all var(--transition-normal);
 }
 
@@ -216,6 +223,17 @@ img {
     justify-content: space-between;
     align-items: center;
     padding: 1.25rem 1.5rem;
+}
+/* Logo Styling */
+.logo {
+  display: flex;
+  align-items: center;
+}
+
+.logo-img {
+  height: 100px;
+  width: auto;
+  margin-right: 12px;
 }
 
 .logo {
@@ -232,6 +250,7 @@ img {
     font-size: 1.75rem;
     margin-right: 0.5rem;
 }
+
 
 .nav-menu {
     display: flex;
@@ -372,7 +391,7 @@ img {
     left: 0;
     width: 100%;
     height: 100%;
-    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.3)), url('../images/hero-bg.jpg');
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.3)), url('https://assets.mixkit.co/videos/4075/4075-720.mp4');
     background-size: cover;
     background-position: center;
     z-index: 1;
@@ -446,7 +465,7 @@ img {
 
 /* Services Preview */
 .services-preview {
-    background-color: white;
+    background-color: rgba(255, 255, 255, 0.712);
 }
 
 .services-grid {
@@ -590,7 +609,7 @@ img {
 
 /* Why Choose Us */
 .why-us {
-    background-color: white;
+    background-color: rgba(255, 255, 255, 0.667);
 }
 
 .why-grid {
